@@ -1,0 +1,138 @@
+.center-diamonds {
+   margin-left: 10%;
+}
+
+.diamond {
+  width: 200px;
+  height: 200px;
+  background: #1eff00;
+  /* Rotate */
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  /* Rotate Origin */
+  -webkit-transform-origin: 0 100%;
+  -moz-transform-origin: 0 100%;
+  -ms-transform-origin: 0 100%;
+  -o-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+  border-radius: 0px;
+  position: relative;
+  overflow: hidden;
+  margin-right: 90px;
+  display: inline-block;
+}
+
+.diamond:nth-child(1){
+  margin-left: 0;
+}
+
+.diamond::after{
+  content: "";
+  width: 270px;
+  height: 270px;
+  position: absolute;
+  top:50%;
+  left: 50%;
+  margin-left: -150px;
+  margin-top: -150px;
+  background: inherit;
+  /* Rotate */
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.one-edge-shadow {
+  -webkit-box-shadow: 0px -8px 4px -6px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0px -8px 4px -6px rgba(0, 0, 0, 0.6);
+  box-shadow: 0px -8px 4px -6px rgba(0, 0, 0, 0.6);
+}
+
+#diamond-1{
+  background: url('../photos/car.jpg');
+  background-size: cover;
+  background-position: center center;
+}
+
+#diamond-2{
+  background: url('../photos/ivey.jpg');
+  background-size: cover;
+  background-position: center center;
+}
+
+#diamond-3{
+  background: url('../photos/montstreet.jpg');
+  background-size: cover;
+  background-position: center center;
+}
+
+#diamond-4{
+  background: url('../photos/trees.jpg');
+  background-size: cover;
+  background-position: center center;
+}
+
+#diamond-5{
+  background: url('../photos/cason.jpg');
+  background-size: cover;
+  background-position: center center;
+}
+
+#diamond-6{
+  background: url('../photos/hoop.jpg');
+  background-size: cover;
+  background-position: center center;
+}
+
+#diamond-7{
+  background: url('../photos/jetpuff.jpg');
+  background-size: cover;
+  background-position: center center;
+}
+
+#diamond-8{
+  background: url('../photos/zapri.jpg');
+  background-size: cover;
+  background-position: center center;
+}
+
+#diamond-9{
+  background: url('../photos/trees.jpg');
+  background-size: cover;
+  background-position: center center;
+}
+
+#diamond-10{
+  background: url('../photos/car.jpg');
+  background-size: cover;
+  background-position: center center;
+}
+
+#diamond-11{
+  background: url('../photos/montstreet.jpg');
+  background-size: cover;
+  background-position: center center;
+}
+
+#diamond-12{
+  background: url('../photos/ivey.jpg');
+  background-size: cover;
+  background-position: center center;
+}
+
+#diamond-13{
+  background: url('../photos/cason.jpg');
+  background-size: cover;
+  background-position: center center;
+}
+
+#diamond-14{
+  background: url('../photos/zapri.jpg');
+  background-size: cover;
+  background-position: center center;
+}

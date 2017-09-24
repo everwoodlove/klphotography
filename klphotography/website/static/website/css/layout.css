@@ -1,0 +1,68 @@
+.body-font {
+    font-family: 'Philosopher', sans-serif;
+}
+
+.navbar-brand-font {
+    font-family: 'Merienda', cursive;
+}
+
+.header-font {
+    font-family: 'Merienda', cursive;
+    font-size: 5em;
+}
+
+.header-container {
+    padding: 10px 15px;
+}
+
+.header-container:before, .header-container:after {
+    content: "";
+    height: 1px;
+    background: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(147,147,147,1) 50%, rgba(0,0,0,0) 100%);
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.navbar-light .navbar-brand {
+    color: white;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: white;
+}
+
+.navbar-background {
+    background-color: #990000;
+}
+
+.navbar-light .navbar-toggler {
+    border-color: white;
+}
+
+.navbar-light .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255, 255, 255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.image-tile-full {
+    height: auto;
+    max-width: 100%;
+    border-bottom: 2.5px solid black;
+    border-top: 2.5px solid black;
+}
+
+.image-tile-half {
+    height: auto;
+    max-width: 50%;
+    float: left;
+    border-bottom: 2.5px solid black;
+    border-top: 2.5px solid black;
+}
+
+.left-half {
+    border-right: 2px solid black;
+}
+
+.right-half {
+    border-left: 2px solid black;
+}
