@@ -1,0 +1,76 @@
+.left-half {
+    border-right: 2px solid black;
+}
+
+.right-half {
+    border-left: 2px solid black;
+}
+
+.image-tile-full {
+    height: auto;
+    max-width: 100%;
+    border-bottom: 2.5px solid black;
+    border-top: 2.5px solid black;
+    transition: opacity 1s;
+}
+
+.image-tile-half {
+    height: auto;
+    max-width: 50%;
+    float: left;
+    border-bottom: 2.5px solid black;
+    border-top: 2.5px solid black;
+    transition: opacity 1s;
+}
+
+.image-container {
+   position: relative;
+}
+
+.image-text {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   opacity: 0;
+   transition: opacity 1s, visibility 1s;
+   transform: translate(-50%, -50%);
+   -ms-transform: translate(-50%, -50%);
+}
+
+.image-text-half {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   width: 50%;
+   opacity: 0;
+   transition: opacity 1s, visibility 1s;
+   transform: translate(-25%, -25%);
+   -ms-transform: translate(-25%, -25%);
+}
+
+.fade-photo {
+  opacity: .7;
+}
+
+.show-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+./*image-container:hover > .image-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+.image-container:hover > .image-text-half {
+  visibility: visible;
+  opacity: 1;
+}
+
+.image-container:hover > .image-tile-full {
+  opacity: .7;
+}
+
+.image-container:hover > .image-half {
+  opacity: .7;
+}*/

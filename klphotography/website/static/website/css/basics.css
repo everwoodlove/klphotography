@@ -1,0 +1,55 @@
+:root {
+    --dew: #90b2bb;
+    --rain: #5b7d86;
+    --currant: #45405e;
+    --slate: #2a414f;
+    --creosote: #2e323d;
+}
+
+.bg-dew {
+    background-color: var(--dew);
+}
+
+.bg-rain {
+    background-color: var(--rain);
+}
+
+.bg-slate {
+    background-color: var(--slate);
+}
+
+.bg-currant {
+    background-color: var(--currant);
+}
+
+.bg-creosote {
+    background-color: var(--creosote);
+}
+
+.text-dew {
+    color: var(--dew);
+}
+
+.text-rain {
+    color: var(--rain);
+}
+
+.text-slate {
+    color: var(--slate);
+}
+
+.text-currant {
+    color: var(--currant);
+}
+
+.text-creosote {
+    color: var(--creosote);
+}
+
+.text-white {
+    color: white;
+}
+
+.text-black {
+    color: black;
+}
