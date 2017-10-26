@@ -1,16 +1,16 @@
-.left-half {
+.border-right {
     border-right: 2px solid black;
 }
 
-.right-half {
+.border-left {
     border-left: 2px solid black;
 }
 
 .image-tile-full {
     height: auto;
     max-width: 100%;
-    border-bottom: 2.5px solid black;
-    border-top: 2.5px solid black;
+    //border-bottom: 2.5px solid black;
+    //border-top: 2.5px solid black;
     transition: opacity 1s;
 }
 
@@ -18,13 +18,15 @@
     height: auto;
     max-width: 50%;
     float: left;
-    border-bottom: 2.5px solid black;
-    border-top: 2.5px solid black;
+    //border-bottom: 2.5px solid black;
+    //border-top: 2.5px solid black;
     transition: opacity 1s;
 }
 
 .image-container {
    position: relative;
+   overflow: hidden;
+   height: 80vh;
 }
 
 .image-text {
@@ -36,6 +38,14 @@
    transform: translate(-50%, -50%);
    -ms-transform: translate(-50%, -50%);
 }
+
+.image-text-visible {
+   position: absolute;
+   top: 5%;
+   left: 25%;
+   right: 25%;
+}
+
 
 .image-text-half {
    position: absolute;

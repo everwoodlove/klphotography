@@ -26,6 +26,10 @@
     background-color: var(--creosote);
 }
 
+.bg-black {
+    background-color: black;
+}
+
 .text-dew {
     color: var(--dew);
 }
@@ -52,4 +56,28 @@
 
 .text-black {
     color: black;
+}
+
+.border-left {
+    border-left: 2.5px solid black;
+}
+
+.border-right {
+    border-right: 2.5px solid black;
+}
+
+.border-bottom {
+    border-bottom: 2.5px solid black;
+}
+
+.border-top {
+    border-top: 2.5px solid black;
+}
+
+.border-top-large {
+    border-top: 5px solid black;
+}
+
+.border-bottom-large {
+    border-bottom: 5px solid black;
 }

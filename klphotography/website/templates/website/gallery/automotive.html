@@ -1,0 +1,36 @@
+{% extends 'website/layout.html' %}
+
+{% load static %}
+
+{% block content %}
+
+
+<div class="auto">
+    <div class="image-container">
+        <img class="image-tile-full border-bottom-large" style="background: url({% static 'website/photos/car2.jpg' %}) no - repeat center center;">
+        <span class="image-text-visible align-middle photo-font text-currant text-center">
+             Automotive
+        </span>
+    </div>
+
+    {% if photos %}
+        {% for photoSet in photos %}
+            {% if photoSet.landscapes % 2  == 0 %}
+            {% else if photoSet.portraits % 2  == 0 %}
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+
+
+    <div class="text-center row">
+        <div class="image-half">
+            <img class="col img-responsive border-right border-top-large" src="{% static 'website/photos/kayla.jpg' %}">
+        </div>
+        <div class="image-half">
+            <img class="col img-responsive border-left border-top-large" src="{% static 'website/photos/kayla.jpg' %}">
+        </div>
+    </div>
+
+    <img class="image-tile-full border-top-large border-bottom-large" src="{% static 'website/photos/car2.jpg' %}">
+</div>
+{% endblock %}

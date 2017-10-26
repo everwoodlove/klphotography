@@ -1,0 +1,24 @@
+{% extends 'website/layout.html' %}
+
+{% load static %}
+
+{% block content %}
+<div class="pets">
+    <div class="image-container">
+        <img class="image-tile-full border-bottom-large" src="{% static 'website/photos/rayan_zaied.jpg' %}">
+        <span class="image-text-visible align-middle photo-font text-currant text-center">
+             Pets
+        </span>
+    </div>
+    <div class="text-center row">
+        <div class="image-half">
+            <img class="col img-responsive border-right border-top-large" src="{% static 'website/photos/kayla.jpg' %}">
+        </div>
+        <div class="image-half">
+            <img class="col img-responsive border-left border-top-large" src="{% static 'website/photos/kayla.jpg' %}">
+        </div>
+    </div>
+
+    <img class="image-tile-full border-top-large border-bottom-large" src="{% static 'website/photos/car2.jpg' %}">
+</div>
+{% endblock %}
