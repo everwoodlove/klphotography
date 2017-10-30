@@ -11,12 +11,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/website/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
-              <caret line="4" column="35" lean-forward="true" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
-              <folding />
+              <caret line="4" column="35" lean-forward="false" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -24,31 +26,9 @@
       <file leaf-file-name="automotive.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/website/templates/website/gallery/automotive.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="31" />
+            <state relative-caret-position="480">
+              <caret line="32" column="14" lean-forward="true" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="14" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="basics.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/website/static/website/css/basics.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="645">
-              <caret line="112" column="24" lean-forward="false" selection-start-line="112" selection-start-column="24" selection-end-line="112" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="about-me.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/website/templates/website/about-me.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="48" lean-forward="false" selection-start-line="21" selection-start-column="48" selection-end-line="21" selection-end-column="48" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -105,7 +85,6 @@
         <option value="$PROJECT_DIR$/website/templates/website/gallery/pets.html" />
         <option value="$PROJECT_DIR$/website/templates/website/gallery/portraits.html" />
         <option value="$PROJECT_DIR$/website/templates/website/gallery/misc.html" />
-        <option value="$PROJECT_DIR$/website/views.py" />
         <option value="$PROJECT_DIR$/website/static/website/js/custom.js" />
         <option value="$PROJECT_DIR$/website/static/website/css/photo-collage.css" />
         <option value="$PROJECT_DIR$/website/templates/website/photo-collage.html" />
@@ -113,13 +92,14 @@
         <option value="$PROJECT_DIR$/website/static/website/css/navbar.css" />
         <option value="$PROJECT_DIR$/website/templates/website/layout.html" />
         <option value="$PROJECT_DIR$/website/templates/website/navbar.html" />
-        <option value="$PROJECT_DIR$/website/templates/website/footer.html" />
         <option value="$PROJECT_DIR$/website/templates/website/home.html" />
-        <option value="$PROJECT_DIR$/website/templates/website/gallery/automotive.html" />
         <option value="$PROJECT_DIR$/website/static/website/css/home.css" />
         <option value="$PROJECT_DIR$/website/static/website/css/layout.css" />
         <option value="$PROJECT_DIR$/website/static/website/css/basics.css" />
         <option value="$PROJECT_DIR$/website/templates/website/about-me.html" />
+        <option value="$PROJECT_DIR$/website/templates/website/footer.html" />
+        <option value="$PROJECT_DIR$/website/templates/website/gallery/automotive.html" />
+        <option value="$PROJECT_DIR$/website/views.py" />
       </list>
     </option>
   </component>
@@ -182,14 +162,6 @@
               <item name="static" type="462c0819:PsiDirectoryNode" />
               <item name="website" type="462c0819:PsiDirectoryNode" />
               <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="klphotography" type="b2602c69:ProjectViewProjectNode" />
-              <item name="klphotography" type="462c0819:PsiDirectoryNode" />
-              <item name="website" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="website" type="462c0819:PsiDirectoryNode" />
-              <item name="social-media-icons" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="klphotography" type="b2602c69:ProjectViewProjectNode" />
@@ -583,14 +555,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/website/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="35" lean-forward="true" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/website/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -623,46 +587,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/website/templates/website/footer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" column="33" lean-forward="false" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#nav#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#a#0;n#li#1;n#ul#0;n#div#0;n#nav#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/website/templates/website/home.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1185">
           <caret line="79" column="27" lean-forward="true" selection-start-line="79" selection-start-column="27" selection-end-line="79" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/website/static/website/css/home.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="22" column="13" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/website/static/website/css/layout.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="750">
-          <caret line="92" column="28" lean-forward="false" selection-start-line="92" selection-start-column="28" selection-end-line="92" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/website/templates/website/gallery/automotive.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="31" />
           <folding />
         </state>
       </provider>
@@ -680,7 +608,53 @@
         <state relative-caret-position="315">
           <caret line="21" column="48" lean-forward="false" selection-start-line="21" selection-start-column="48" selection-end-line="21" selection-end-column="48" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/templates/website/footer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="6" lean-forward="true" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#a#0;n#li#0;n#ul#0;n#nav#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#li#1;n#ul#0;n#nav#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/static/website/css/layout.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1380">
+          <caret line="92" column="28" lean-forward="false" selection-start-line="92" selection-start-column="28" selection-end-line="92" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/static/website/css/home.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="20" lean-forward="true" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/templates/website/gallery/automotive.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" column="14" lean-forward="true" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="35" lean-forward="false" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>

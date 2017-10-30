@@ -3,7 +3,6 @@ import os
 from datetime import *
 from PIL import Image
 from django.shortcuts import render
-from klphotography import settings
 
 def home(request):
     return render(request, 'website/home.html')
@@ -37,12 +36,6 @@ def gallery(request, category):
 # and portraits to be the half images
 # But what if we only have 1 portrait and 2 landscapes?
 
-
-# TODO set containers on images to overflow: hidden and height: 50vh or maybe 80 for big images
-# Set half landscapes no higher than 60
-# Doesn't work on mobile --- might need 2 separate divs for this
-# Then set background images via inline styling so that we can do
-# background: url(bg_apple_little.gif) no - repeat center center; to center it
 
 def get_gallery_preview_photos(category):
     #TODO THis won't work in prod!
