@@ -6,6 +6,9 @@
     --creosote: #2e323d;
 }
 
+
+/* BACKGROUND COLORS */
+
 .bg-dew {
     background-color: var(--dew);
 }
@@ -29,6 +32,9 @@
 .bg-black {
     background-color: black;
 }
+
+
+/* TEXT COLORS */
 
 .text-dew {
     color: var(--dew);
@@ -58,26 +64,36 @@
     color: black;
 }
 
-.border-left {
-    border-left: 2.5px solid black;
-}
+/* BORDERS */
 
-.border-right {
-    border-right: 2.5px solid black;
+@media (min-width: 992px) {
+    .border-left {
+       border-left: 1.5px solid white;
+    }
+
+    .border-right {
+        border-right: 1.5px solid white;
+    }
+
 }
 
 .border-bottom {
-    border-bottom: 2.5px solid black;
+    border-bottom: 1.5px solid white;
 }
 
 .border-top {
-    border-top: 2.5px solid black;
+    border-top: 1.5px solid white;
 }
 
 .border-top-large {
-    border-top: 5px solid black;
+    border-top: 5px solid white;
 }
 
 .border-bottom-large {
-    border-bottom: 5px solid black;
+    border-bottom: 5px solid white;
+}
+
+.page-border {
+    border-right: 3px solid white;
+    border-left: 3px solid white;
 }

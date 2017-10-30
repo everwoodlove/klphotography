@@ -1,4 +1,4 @@
-var hoverElements = document.querySelectorAll('.hover');
+/*var hoverElements = document.querySelectorAll('.hover');
 
 for (var i = 0, len = hoverElements.length; i < len; i++) {
     var hoverElement = hoverElements[i];
@@ -18,4 +18,4 @@ for (var i = 0, len = hoverElements.length; i < len; i++) {
         image.classList.remove('fade-photo');
         text.classList.remove('show-text');
     });
-}
+}*/

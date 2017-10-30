@@ -28,7 +28,7 @@ body {
     margin-top: 10px;
 }
 
-@media (min-width: 720px) {
+@media (min-width: 768px) {
     .image-half {
         height: auto;
         max-width: 50%;
@@ -40,7 +40,9 @@ body {
         padding-top: 10%;
         padding-bottom: 10%;
     }
+}
 
+@media (min-width: 992px) {
     .center-quote {
         margin-top: 16%;
     }
@@ -55,6 +57,14 @@ body {
     padding-bottom: 20px;
 }
 
+.padding-20 {
+    padding: 20px;
+}
+
 .paragraph {
     font-size: 1.5em;
+}
+
+.no-margin {
+    margin: 0;
 }

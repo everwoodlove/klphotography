@@ -4,33 +4,33 @@
 
 {% block content %}
 
-
 <div class="auto">
-    <div class="image-container">
-        <img class="image-tile-full border-bottom-large" style="background: url({% static 'website/photos/car2.jpg' %}) no - repeat center center;">
-        <span class="image-text-visible align-middle photo-font text-currant text-center">
-             Automotive
+   <!-- <h1 class="text-center padding text-rain">
+        Automotive
+    </h1>-->
+
+    <div class="image-container border-bottom border-top">
+        <a href="#">
+            <img class="image-tile-full" src="{% static 'website/photos/car2.jpg' %}">
+        </a>
+        <span class="image-text photo-font align-middle text-rain text-center">
+            TEST HEADING 1
         </span>
+        <!--<div class="" style="height:80vh; background: url({% static 'website/photos/car2.jpg' %}) no-repeat center center;"></div>-->
     </div>
-
-    {% if photos %}
-        {% for photoSet in photos %}
-            {% if photoSet.landscapes % 2  == 0 %}
-            {% else if photoSet.portraits % 2  == 0 %}
-            {% endif %}
-        {% endfor %}
-    {% endif %}
+    <!--<div class="image-container">
+        <img class="image-tile-full border-bottom-large border-top-large" src="{% static 'website/photos/car2.jpg' %}">
+    </div>-->
 
 
-    <div class="text-center row">
-        <div class="image-half">
-            <img class="col img-responsive border-right border-top-large" src="{% static 'website/photos/kayla.jpg' %}">
+    <div class="text-center row no-margin">
+        <div class="image-half border-right border-top border-bottom">
+            <img class="col img-responsive" src="{% static 'website/photos/kayla.jpg' %}">
         </div>
-        <div class="image-half">
-            <img class="col img-responsive border-left border-top-large" src="{% static 'website/photos/kayla.jpg' %}">
+        <div class="image-half border-left border-top border-bottom">
+            <img class="col img-responsive" src="{% static 'website/photos/kayla.jpg' %}">
         </div>
     </div>
-
-    <img class="image-tile-full border-top-large border-bottom-large" src="{% static 'website/photos/car2.jpg' %}">
 </div>
+
 {% endblock %}

@@ -1,5 +1,76 @@
 {% extends 'website/layout.html' %}
+{% load static %}
 
 {% block content %}
-    {% include 'website/photo-collage.html' %}
+<div>
+    <div class="image-container hover border-bottom border-top">
+        <img class="image-tile-full" src="{% static 'website/photos/rayan_zaied.jpg' %}">
+        <span class="image-text photo-font align-middle text-currant text-center">
+             Personal Portrait: Rayan
+             <br/>
+             Date:
+             <br/>
+             Category: Portraits
+        </span>
+    </div>
+
+    <div class="text-center row image-container hover no-margin">
+        <div class="image-half border-top border-bottom border-right">
+            <img class="col img-responsive" src="{% static 'website/photos/jetpuff.jpg' %}">
+        </div>
+      <!--  <span class="image-text-half photo-font align-middle text-center">
+             JetPuff the Jetta
+             <br/>
+             Date:
+             <br/>
+            Category: Automotive
+        </span>-->
+
+        <div class="image-half border-top border-bottom border-left">
+            <img class="col img-responsive" src="{% static 'website/photos/alice.jpg' %}">
+        </div>
+     <!--   <span class="image-text-half photo-font align-middle text-center">
+            Alice in Wonderland Shoot
+            <br/>
+             Date:
+             <br/>
+            Category: Misc.
+        </span>-->
+    </div>
+
+    <div class="image-container hover border-bottom border-top">
+         <img class="image-tile-full" src="{% static 'website/photos/car2.jpg' %}">
+         <span class="image-text photo-font align-middle text-center">
+             Auto Imports: Japan
+            <br/>
+             Date:
+             <br/>
+            Category: Automotive
+        </span>
+    </div>
+
+    <div class="text-center row image-container hover no-margin">
+        <div class="image-half border-top border-bottom border-right">
+            <img class="col img-responsive" src="{% static 'website/photos/cat.jpg' %}">
+        </div>
+      <!--  <span class="image-text-half photo-font align-middle text-center">
+             Black Cat
+             <br/>
+             Date:
+             <br/>
+            Category: Pets
+        </span>-->
+
+        <div class="image-half border-left border-top border-bottom">
+            <img class="col img-responsive" src="{% static 'website/photos/ivey.jpg' %}">
+        </div>
+        <!--<span class="image-text-half photo-font align-middle text-center">
+            Black Cat
+             <br/>
+             Date:
+             <br/>
+            Category: Pets
+        </span>-->
+    </div>
+</div>
 {% endblock %}
