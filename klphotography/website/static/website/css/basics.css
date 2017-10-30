@@ -98,6 +98,21 @@
     border-left: 3px solid white;
 }
 
+.border-full {
+    border-bottom: 1.5px solid white;
+    border-top: 1.5px solid white;
+    border-right: 1.5px solid white;
+    border-left: 1.5px solid white;
+}
+
+.border-dew {
+    border-color: var(--dew);
+}
+
+.border-black {
+    border-color: black;
+}
+
 /* PADDING */
 
 .padding-top-20 {
@@ -105,5 +120,5 @@
 }
 
 .padding-bottom-20 {
-    padding-bottom: 20px;
+    padding-: 20px;
 }
