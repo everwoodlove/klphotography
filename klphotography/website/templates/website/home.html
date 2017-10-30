@@ -1,88 +1,62 @@
 {% extends 'website/layout.html' %}
 {% load static %}
 
+
 {% block content %}
-<div>
-    <div class="image-container hover border-bottom border-top">
-        <a href="#">
-            <img class="image-tile-full" src="{% static 'website/photos/rayan_zaied.jpg' %}">
-        </a>
-        <span class="image-text photo-font align-middle text-white text-center">
-             Rayan ~ Portrait
-            <br/>
-            <span class="h5">
-                10.16.17
-            </span>
-        </span>
-    </div>
 
-    <div class="text-center row image-container hover no-margin">
-        <div class="image-half border-top border-bottom border-right">
-            <a href="#">
-                <img class="col img-responsive" src="{% static 'website/photos/jetpuff.jpg' %}">
-            </a>
-            <span class="text-overlay-left photo-font-half align-middle text-center text-white">
-              JetPuff ~ Automotive
-              <br/>
-              <span class="h5">
-                    10.16.17
+{% if photos %}
+    <div>
+    {% for photo in photos %}
+        {% if photo.number == 0 %}
+            <div class="image-container hover border-bottom border-top">
+                <a href="#">
+                    <img class="image-tile-full" src="{% static ''%}{{ photo.photo }}">
+                </a>
+                <span class="image-text photo-font align-middle text-white text-center">
+                     {{ photo.name }} ~ {{ photo.category }}
+                    <br/>
+                    <span class="h5">
+                        {{ photo.date }}
+                    </span>
                 </span>
-            </span>
-        </div>
+            </div>
+        {% else %}
+            {% if photo.number == 1 %}
+                <div class="text-center row image-container hover no-margin">
+            {% endif %}
 
-        <div class="image-half border-top border-bottom border-left">
-            <a href="#">
-                <img class="col img-responsive" src="{% static 'website/photos/alice.jpg' %}">
-            </a>
-            <span class="text-overlay-right photo-font-half align-middle text-center text-white">
-            Alice in Wonderland ~ Cosplay
-            <br/>
-            <span class="h5">
-                10.16.17
-            </span>
-        </span>
-        </div>
+            <div class="image-half border-top border-bottom border-right">
+                <a href="#">
+                    <img class="col img-responsive" src="{% static '' %}{{ photo.photo }}">
+                </a>
+
+                {% if photo.number == 1 %}
+                    <span class="text-overlay-left photo-font-half align-middle text-center text-white">
+                      {{ photo.name }} ~ {{ photo.category }}
+                      <br/>
+                      <span class="h5">
+                          {{ photo.date }}
+                      </span>
+                    </span>
+                {% elif photo.number == 2 %}
+                    <span class="text-overlay-right photo-font-half align-middle text-center text-white">
+                      {{ photo.name }} ~ {{ photo.category }}
+                      <br/>
+                      <span class="h5">
+                          {{ photo.date }}
+                      </span>
+                    </span>
+                {% endif %}
+                
+            </div>
+
+            {% if photo.number == 2 %}
+                </div>
+            {% endif %}
+        {% endif %}
+    {% endfor %}
     </div>
 
-    <div class="image-container hover border-bottom border-top">
-        <a href="#">
-            <img class="image-tile-full" src="{% static 'website/photos/car2.jpg' %}">
-        </a>
-         <span class="image-text photo-font align-middle text-center text-white">
-             Imports ~ Automotive
-            <br/>
-            <span class="h5">
-                10.16.17
-            </span>
-        </span>
-    </div>
+{% endif %}
 
-    <div class="text-center row image-container hover no-margin">
-        <div class="image-half border-top border-bottom border-right">
-            <a href="#">
-                <img class="col img-responsive" src="{% static 'website/photos/cat.jpg' %}">
-            </a>
-        </div>
-      <span class="text-overlay-left photo-font-half align-middle text-center text-white">
-             Chester ~ Pets
-             <br/>
-            <span class="h5">
-                10.16.17
-            </span>
-        </span>
-
-        <div class="image-half border-left border-top border-bottom">
-            <a href="#">
-                <img class="col img-responsive" src="{% static 'website/photos/ivey.jpg' %}">
-            </a>
-        </div>
-        <span class="text-overlay-right photo-font-half align-middle text-center text-white">
-            Ivey ~ Portrait
-            <br/>
-            <span class="h5">
-                10.16.17
-            </span>
-        </span>
-    </div>
-</div>
 {% endblock %}

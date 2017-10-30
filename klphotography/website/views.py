@@ -4,8 +4,18 @@ from datetime import *
 from PIL import Image
 from django.shortcuts import render
 
+categories = {'Pets', 'Portraits', 'Automotive', 'Misc'}
+
 def home(request):
-    return render(request, 'website/home.html')
+    photos = get_homepage_photos()
+    if photos:
+        context = {'photos': photos}
+    else:
+        context = {}
+
+    print photos
+
+    return render(request, 'website/home.html', context)
 
 def pricing(request):
     return render(request, 'website/pricing.html')
@@ -19,16 +29,12 @@ def contact(request):
 def gallery(request, category):
     url = 'website/gallery/'
 
-    if category == 'pets':
-        url += 'pets.html'
-    elif category == 'portraits':
-        url += 'portraits.html'
-    elif category == 'automotive':
-        url += 'automotive.html'
-    elif category == 'misc':
-        url += 'misc.html'
+    for cat in categories:
+        if category == cat:
+            url += cat + '.html'
+            break
 
-    context = {'photos': get_gallery_preview_photos(category)}
+    context = {'photos': get_preview_photos(category, 3)}
 
     return render(request, url, context)
 
@@ -36,31 +42,58 @@ def gallery(request, category):
 # and portraits to be the half images
 # But what if we only have 1 portrait and 2 landscapes?
 
+#TODO for home photos:
+# parse through all directories and get most recent 6-7 shoots to display and pick first image of each in the preview folder
+def get_homepage_photos():
+    homepage_photos = []
+    i = 0
 
-def get_gallery_preview_photos(category):
-    #TODO THis won't work in prod!
-    original_path = '/Users/bemmons/Documents/Nichole/klphotography/klphotography/klphotography/website/static/website/photos/' + category + '/'
-    folders = get_most_recent_folders_by_date(original_path)
+    for category in categories:
+        photo_set = get_preview_photos(category, 7)
+        for photo in photo_set:
+            if i == 0:
+                name = 'landscapes'
+            else:
+                name = 'portraits'
+
+            if photo.get(name, []):
+                shoot_photo = {'name': photo.get('name', ''), 'date': photo.get('date', ''),
+                               'photo': photo.get(name, [''])[0],
+                               'category': photo.get('category', ''), 'number': i}
+                i += 1
+
+                if i > 2:
+                    i = 0
+
+                homepage_photos.append(shoot_photo)
+
+    return homepage_photos
+
+
+def get_preview_photos(category, list_length):
+    #TODO This won't work in prod!
+    original_path = '/Users/bemmons/Documents/Nichole/klphotography/klphotography/klphotography/website/static/website/photos/' + category
+    dates_directories = get_most_recent_folders_by_date(original_path)
 
     photos_to_return = []
 
-    for folder in folders:
-        folder_path = original_path + '/' + folder
-        directory_names = os.listdir(folder_path)
+    for date in dates_directories:
+        folder_path = original_path + '/' + date
+        shoot_name_directories = os.listdir(folder_path)
 
-        for directory in directory_names:
-            path = folder_path + '/' + directory + '/preview'
+        for shoot_name in shoot_name_directories:
+            path = folder_path + '/' + shoot_name + '/preview'
             preview_photos = get_images(path)
 
             landscapes, portraits = sort_images(preview_photos)
 
-            photo_set = {'name': directory, 'landscapes': landscapes, 'portraits': portraits}
+            photo_set = {'name': shoot_name, 'date': date, 'landscapes': landscapes, 'portraits': portraits, 'category': category}
             photos_to_return.append(photo_set)
 
-            if len(photos_to_return) > 2:
+            if len(photos_to_return) > list_length:
                 break
 
-        if len(photos_to_return) > 2:
+        if len(photos_to_return) > list_length:
             break
 
     return photos_to_return
@@ -103,7 +136,8 @@ def get_images(path):
 
     for file in only_files:
         if file.endswith(".png") or file.endswith(".jpg"):
-            photos.append(os.path.join(path, file))
+            photo_path = os.path.join(path, file)
+            photos.append(photo_path)
 
     return photos
 
@@ -114,6 +148,9 @@ def sort_images(images_list):
     for image in images_list:
         im = Image.open(image)
         width, height = im.size
+
+        # TODO remove this line when going to prod
+        image = image.replace('/Users/bemmons/Documents/Nichole/klphotography/klphotography/klphotography/website/static/', '')
         if width > height:
             landscapes.append(image)
         else:

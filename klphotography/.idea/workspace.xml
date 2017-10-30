@@ -11,13 +11,40 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/website/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="35" lean-forward="false" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
+            <state relative-caret-position="260">
+              <caret line="53" column="22" lean-forward="true" selection-start-line="53" selection-start-column="22" selection-end-line="54" selection-end-column="23" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
+                <element signature="e#661#893#0" expanded="false" />
+                <element signature="e#3007#3701#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/website/templates/website/home.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="668">
+              <caret line="49" column="16" lean-forward="true" selection-start-line="49" selection-start-column="16" selection-end-line="49" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home-copy.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/website/templates/website/home-copy.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+              <folding>
+                <element signature="n#div#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#div#1;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#div#2;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#div#3;n#div#0;n#!!top" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -92,7 +119,6 @@
         <option value="$PROJECT_DIR$/website/static/website/css/navbar.css" />
         <option value="$PROJECT_DIR$/website/templates/website/layout.html" />
         <option value="$PROJECT_DIR$/website/templates/website/navbar.html" />
-        <option value="$PROJECT_DIR$/website/templates/website/home.html" />
         <option value="$PROJECT_DIR$/website/static/website/css/home.css" />
         <option value="$PROJECT_DIR$/website/static/website/css/layout.css" />
         <option value="$PROJECT_DIR$/website/static/website/css/basics.css" />
@@ -100,6 +126,7 @@
         <option value="$PROJECT_DIR$/website/templates/website/footer.html" />
         <option value="$PROJECT_DIR$/website/templates/website/gallery/automotive.html" />
         <option value="$PROJECT_DIR$/website/views.py" />
+        <option value="$PROJECT_DIR$/website/templates/website/home.html" />
       </list>
     </option>
   </component>
@@ -161,7 +188,231 @@
               <item name="website" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
               <item name="website" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="photos" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="klphotography" type="b2602c69:ProjectViewProjectNode" />
+              <item name="klphotography" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="photos" type="462c0819:PsiDirectoryNode" />
+              <item name="automotive" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="klphotography" type="b2602c69:ProjectViewProjectNode" />
+              <item name="klphotography" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="photos" type="462c0819:PsiDirectoryNode" />
+              <item name="automotive" type="462c0819:PsiDirectoryNode" />
+              <item name="10.19.2017" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="klphotography" type="b2602c69:ProjectViewProjectNode" />
+              <item name="klphotography" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="photos" type="462c0819:PsiDirectoryNode" />
+              <item name="automotive" type="462c0819:PsiDirectoryNode" />
+              <item name="10.19.2017" type="462c0819:PsiDirectoryNode" />
+              <item name="abc12345678" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="klphotography" type="b2602c69:ProjectViewProjectNode" />
+              <item name="klphotography" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="photos" type="462c0819:PsiDirectoryNode" />
+              <item name="automotive" type="462c0819:PsiDirectoryNode" />
+              <item name="10.19.2017" type="462c0819:PsiDirectoryNode" />
+              <item name="abc12345678" type="462c0819:PsiDirectoryNode" />
+              <item name="preview" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="klphotography" type="b2602c69:ProjectViewProjectNode" />
+              <item name="klphotography" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="photos" type="462c0819:PsiDirectoryNode" />
+              <item name="automotive" type="462c0819:PsiDirectoryNode" />
+              <item name="10.19.2017" type="462c0819:PsiDirectoryNode" />
+              <item name="love cars" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="klphotography" type="b2602c69:ProjectViewProjectNode" />
+              <item name="klphotography" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="photos" type="462c0819:PsiDirectoryNode" />
+              <item name="automotive" type="462c0819:PsiDirectoryNode" />
+              <item name="10.19.2017" type="462c0819:PsiDirectoryNode" />
+              <item name="love cars" type="462c0819:PsiDirectoryNode" />
+              <item name="preview" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="klphotography" type="b2602c69:ProjectViewProjectNode" />
+              <item name="klphotography" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="photos" type="462c0819:PsiDirectoryNode" />
+              <item name="misc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="klphotography" type="b2602c69:ProjectViewProjectNode" />
+              <item name="klphotography" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="photos" type="462c0819:PsiDirectoryNode" />
+              <item name="misc" type="462c0819:PsiDirectoryNode" />
+              <item name="09.30.2017" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="klphotography" type="b2602c69:ProjectViewProjectNode" />
+              <item name="klphotography" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="photos" type="462c0819:PsiDirectoryNode" />
+              <item name="misc" type="462c0819:PsiDirectoryNode" />
+              <item name="09.30.2017" type="462c0819:PsiDirectoryNode" />
+              <item name="abc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="klphotography" type="b2602c69:ProjectViewProjectNode" />
+              <item name="klphotography" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="photos" type="462c0819:PsiDirectoryNode" />
+              <item name="misc" type="462c0819:PsiDirectoryNode" />
+              <item name="09.30.2017" type="462c0819:PsiDirectoryNode" />
+              <item name="abc" type="462c0819:PsiDirectoryNode" />
+              <item name="preview" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="klphotography" type="b2602c69:ProjectViewProjectNode" />
+              <item name="klphotography" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="photos" type="462c0819:PsiDirectoryNode" />
+              <item name="pets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="klphotography" type="b2602c69:ProjectViewProjectNode" />
+              <item name="klphotography" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="photos" type="462c0819:PsiDirectoryNode" />
+              <item name="pets" type="462c0819:PsiDirectoryNode" />
+              <item name="08.10.2017" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="klphotography" type="b2602c69:ProjectViewProjectNode" />
+              <item name="klphotography" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="photos" type="462c0819:PsiDirectoryNode" />
+              <item name="pets" type="462c0819:PsiDirectoryNode" />
+              <item name="08.10.2017" type="462c0819:PsiDirectoryNode" />
+              <item name="abc123" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="klphotography" type="b2602c69:ProjectViewProjectNode" />
+              <item name="klphotography" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="photos" type="462c0819:PsiDirectoryNode" />
+              <item name="pets" type="462c0819:PsiDirectoryNode" />
+              <item name="08.10.2017" type="462c0819:PsiDirectoryNode" />
+              <item name="abc123" type="462c0819:PsiDirectoryNode" />
+              <item name="preview" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="klphotography" type="b2602c69:ProjectViewProjectNode" />
+              <item name="klphotography" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="photos" type="462c0819:PsiDirectoryNode" />
+              <item name="pets" type="462c0819:PsiDirectoryNode" />
+              <item name="10.30.2017" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="klphotography" type="b2602c69:ProjectViewProjectNode" />
+              <item name="klphotography" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="photos" type="462c0819:PsiDirectoryNode" />
+              <item name="pets" type="462c0819:PsiDirectoryNode" />
+              <item name="10.30.2017" type="462c0819:PsiDirectoryNode" />
+              <item name="def" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="klphotography" type="b2602c69:ProjectViewProjectNode" />
+              <item name="klphotography" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="photos" type="462c0819:PsiDirectoryNode" />
+              <item name="pets" type="462c0819:PsiDirectoryNode" />
+              <item name="10.30.2017" type="462c0819:PsiDirectoryNode" />
+              <item name="def" type="462c0819:PsiDirectoryNode" />
+              <item name="preview" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="klphotography" type="b2602c69:ProjectViewProjectNode" />
+              <item name="klphotography" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="photos" type="462c0819:PsiDirectoryNode" />
+              <item name="portraits" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="klphotography" type="b2602c69:ProjectViewProjectNode" />
+              <item name="klphotography" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="photos" type="462c0819:PsiDirectoryNode" />
+              <item name="portraits" type="462c0819:PsiDirectoryNode" />
+              <item name="08.12.2017" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="klphotography" type="b2602c69:ProjectViewProjectNode" />
+              <item name="klphotography" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="photos" type="462c0819:PsiDirectoryNode" />
+              <item name="portraits" type="462c0819:PsiDirectoryNode" />
+              <item name="08.12.2017" type="462c0819:PsiDirectoryNode" />
+              <item name="abc123" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="klphotography" type="b2602c69:ProjectViewProjectNode" />
+              <item name="klphotography" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="photos" type="462c0819:PsiDirectoryNode" />
+              <item name="portraits" type="462c0819:PsiDirectoryNode" />
+              <item name="08.12.2017" type="462c0819:PsiDirectoryNode" />
+              <item name="abc123" type="462c0819:PsiDirectoryNode" />
+              <item name="preview" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="klphotography" type="b2602c69:ProjectViewProjectNode" />
@@ -188,18 +439,18 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/website/static/website/photos/portraits" />
       <recent name="$PROJECT_DIR$/website/static/website/photos/automotive/10.19.2017/New directory/preview" />
       <recent name="$PROJECT_DIR$/website/static/website/photos/automotive/10.19.2017/Test Section/preview" />
       <recent name="$PROJECT_DIR$/website/static/website/photos/automotive/10.19.2017/Test Section" />
       <recent name="$PROJECT_DIR$/website/static/website/photos/portraits/horizontals" />
-      <recent name="$PROJECT_DIR$/website/static/website/photos/portraits/verticals" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/website/static/website/social-media-icons" />
-      <recent name="$PROJECT_DIR$/website/static/website/photos/portraits" />
-      <recent name="$PROJECT_DIR$/website/static/website/photos/pets" />
-      <recent name="$PROJECT_DIR$/website/static/website/photos/misc" />
-      <recent name="$PROJECT_DIR$/website/static/website/photos/automotive" />
+      <recent name="$PROJECT_DIR$/website/static/website/photos/automotive/10.19.2017/love cars/preview" />
+      <recent name="$PROJECT_DIR$/website/static/website/photos/misc/09.30.2017/abc/preview" />
+      <recent name="$PROJECT_DIR$/website/static/website/photos/portraits/08.12.2017/abc123/preview" />
+      <recent name="$PROJECT_DIR$/website/static/website/photos/pets/10.30.2017/def/preview" />
+      <recent name="$PROJECT_DIR$/website/static/website/photos/pets/08.10.2017/abc123/preview" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -297,10 +548,10 @@
     <frame x="0" y="23" width="1397" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17179671" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20615605" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32920793" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -330,13 +581,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/website/static/website/css/home.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="825">
-          <caret line="55" column="2" lean-forward="false" selection-start-line="55" selection-start-column="2" selection-end-line="55" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/website/static/website/css/layout.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
@@ -480,12 +724,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/website/static/website/photos/automotive/10.19.2017/Test Section/preview/car.jpg">
+    <entry file="file://$PROJECT_DIR$/website/static/website/photos/automotive/10.19.2017/abc12345678/preview/car.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/website/static/website/photos/automotive/10.19.2017/New directory/preview/car2.jpg">
+    <entry file="file://$PROJECT_DIR$/website/static/website/photos/automotive/10.19.2017/love cars/preview/car2.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
@@ -587,14 +831,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/website/templates/website/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1185">
-          <caret line="79" column="27" lean-forward="true" selection-start-line="79" selection-start-column="27" selection-end-line="79" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/website/static/website/css/basics.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="645">
@@ -649,13 +885,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/website/templates/website/home-copy.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#3;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/website/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="35" lean-forward="false" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
+        <state relative-caret-position="260">
+          <caret line="53" column="22" lean-forward="true" selection-start-line="53" selection-start-column="22" selection-end-line="54" selection-end-column="23" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#661#893#0" expanded="false" />
+            <element signature="e#3007#3701#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/templates/website/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="668">
+          <caret line="49" column="16" lean-forward="true" selection-start-line="49" selection-start-column="16" selection-end-line="49" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
