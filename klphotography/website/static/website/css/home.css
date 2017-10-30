@@ -36,14 +36,26 @@
 
 
 .image-text-half {
-   position: absolute;
-   top: 50%;
-   left: 50%;
    width: 50%;
-   opacity: 0;
+   //opacity: 0;
    transition: opacity 1s, visibility 1s;
    transform: translate(-25%, -25%);
    -ms-transform: translate(-25%, -25%);
+}
+
+
+.text-overlay-left {
+   position: absolute;
+   top: 50%;
+   left: 15%;
+   max-width: 25%;
+}
+
+.text-overlay-right {
+   position: absolute;
+   top: 50%;
+   left: 65%;
+   max-width: 25%;
 }
 
 .fade-photo {
