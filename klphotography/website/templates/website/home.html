@@ -9,7 +9,7 @@
     {% for photo in photos %}
         {% if photo.number == 0 %}
             <div class="image-container hover border-bottom border-top">
-                <a href="#">
+                <a href="{% url 'shoot' category=photo.category year=photo.year month=photo.month day=photo.day name=photo.name %}">
                     <img class="image-tile-full" src="{% static ''%}{{ photo.photo }}">
                 </a>
                 <span class="image-text photo-font align-middle text-white text-center">
@@ -26,7 +26,7 @@
             {% endif %}
 
             <div class="image-half border-top border-bottom border-right">
-                <a href="#">
+                <a href="{% url 'shoot' category=photo.category year=photo.year month=photo.month day=photo.day name=photo.name %}">
                     <img class="col img-responsive" src="{% static '' %}{{ photo.photo }}">
                 </a>
 
@@ -47,7 +47,7 @@
                       </span>
                     </span>
                 {% endif %}
-                
+
             </div>
 
             {% if photo.number == 2 %}

@@ -17,9 +17,10 @@
           Gallery
         </a>
         <div class="dropdown-menu" aria-labelledby="navbar-desktop-dropdown">
+          <a class="dropdown-item" href="{% url 'gallery' 'portraits' %}">Portraits</a>
+          <a class="dropdown-item" href="{% url 'gallery' 'weddings' %}">Weddings</a>
           <a class="dropdown-item" href="{% url 'gallery' 'automotive' %}">Automotive</a>
           <a class="dropdown-item" href="{% url 'gallery' 'pets' %}">Pets</a>
-          <a class="dropdown-item" href="{% url 'gallery' 'portraits' %}">Portraits</a>
           <a class="dropdown-item" href="{% url 'gallery' 'misc' %}">Miscellaneous</a>
         </div>
       </li>

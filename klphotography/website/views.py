@@ -4,7 +4,7 @@ from datetime import *
 from PIL import Image
 from django.shortcuts import render
 
-categories = {'Pets', 'Portraits', 'Automotive', 'Misc'}
+categories = {'Pets', 'Portraits', 'Automotive', 'Misc', 'Weddings'}
 
 def home(request):
     photos = get_homepage_photos()
@@ -25,6 +25,31 @@ def about(request):
 
 def contact(request):
     return render(request, 'website/contact.html')
+
+def shoot(request, category, year, month, day, name):
+    # Build URL from params
+    # get all images in the folder, including in the preview folder
+    # return them
+
+    url = '/Users/bemmons/Documents/Nichole/klphotography/klphotography/klphotography/website/static/website/photos/' + category + '/' + month + '.' + day + '.' + year + '/' + name
+
+    landscapes, portraits = get_all_photos(url)
+    landscape_photos = []
+    portrait_photos = []
+
+    for photo in landscapes:
+        # TODO remove this line when going to prod
+        photo = photo.replace('/Users/bemmons/Documents/Nichole/klphotography/klphotography/klphotography/website/static/', '')
+        landscape_photos.append(photo)
+
+    for photo in portraits:
+        # TODO remove this line when going to prod
+        photo = photo.replace('/Users/bemmons/Documents/Nichole/klphotography/klphotography/klphotography/website/static/', '')
+        portrait_photos.append(photo)
+
+    context = {'landscapes': landscape_photos, 'portraits': portrait_photos}
+
+    return render(request, 'website/shoot.html', context)
 
 def gallery(request, category):
     url = 'website/gallery/'
@@ -57,7 +82,19 @@ def get_homepage_photos():
                 name = 'portraits'
 
             if photo.get(name, []):
-                shoot_photo = {'name': photo.get('name', ''), 'date': photo.get('date', ''),
+                date = photo.get('date', '')
+                date_split = date.split('.')
+
+                if (len(date_split) is 3):
+                    day = date_split[1]
+                    month = date_split[0]
+                    year = date_split[2]
+                else:
+                    day = ''
+                    month = ''
+                    year = ''
+
+                shoot_photo = {'name': photo.get('name', ''), 'day': day, 'month': month, 'year': year,
                                'photo': photo.get(name, [''])[0],
                                'category': photo.get('category', ''), 'number': i}
                 i += 1
@@ -69,7 +106,6 @@ def get_homepage_photos():
 
     return homepage_photos
 
-
 def get_preview_photos(category, list_length):
     #TODO This won't work in prod!
     original_path = '/Users/bemmons/Documents/Nichole/klphotography/klphotography/klphotography/website/static/website/photos/' + category
@@ -77,57 +113,78 @@ def get_preview_photos(category, list_length):
 
     photos_to_return = []
 
-    for date in dates_directories:
-        folder_path = original_path + '/' + date
-        shoot_name_directories = os.listdir(folder_path)
+    if dates_directories:
+        for date in dates_directories:
+            folder_path = original_path + '/' + date
+            shoot_name_directories = os.listdir(folder_path)
 
-        for shoot_name in shoot_name_directories:
-            path = folder_path + '/' + shoot_name + '/preview'
-            preview_photos = get_images(path)
+            for shoot_name in shoot_name_directories:
+                path = folder_path + '/' + shoot_name + '/preview'
+                preview_photos = get_images(path)
 
-            landscapes, portraits = sort_images(preview_photos)
+                landscapes, portraits = sort_images(preview_photos)
 
-            photo_set = {'name': shoot_name, 'date': date, 'landscapes': landscapes, 'portraits': portraits, 'category': category}
-            photos_to_return.append(photo_set)
+                photo_set = {'name': shoot_name, 'date': date, 'landscapes': landscapes, 'portraits': portraits, 'category': category}
+                photos_to_return.append(photo_set)
+
+                if len(photos_to_return) > list_length:
+                    break
 
             if len(photos_to_return) > list_length:
                 break
 
-        if len(photos_to_return) > list_length:
-            break
-
     return photos_to_return
 
+def get_all_photos(path):
+    photo_set = []
+
+    if os.path.isdir(path):
+        photos = get_images(path)
+        photo_set = photo_set + photos
+
+    path = path + '/preview'
+
+    if os.path.isdir(path):
+        photos = get_images(path)
+        photo_set = photo_set + photos
+
+    landscapes, portraits = sort_images(photo_set)
+
+    return landscapes, portraits
+
 def get_most_recent_folders_by_date(path):
-    directory_names = os.listdir(path)
+    if os.path.isdir(path):
+        directory_names = os.listdir(path)
 
-    dates_list = []
+        dates_list = []
 
-    for name in directory_names:
-        date_split = name.split('.')
+        for name in directory_names:
+            date_split = name.split('.')
 
-        if (len(date_split) is 3):
-            folderDate = datetime(int(date_split[2]), int(date_split[0]), int(date_split[1]))
-            dates_list.append(folderDate)
+            if (len(date_split) is 3):
+                folderDate = datetime(int(date_split[2]), int(date_split[0]), int(date_split[1]))
+                dates_list.append(folderDate)
 
-    folders_to_use = []
-    now = datetime.today()
+        folders_to_use = []
+        now = datetime.today()
 
-    list_length = len(dates_list)
+        list_length = len(dates_list)
 
 
-    for i in xrange(list_length):
-        youngest = max(dt for dt in dates_list if dt < now)
+        for i in xrange(list_length):
+            youngest = max(dt for dt in dates_list if dt < now)
 
-        folders_to_use.append(youngest)
-        dates_list.remove(youngest)
+            folders_to_use.append(youngest)
+            dates_list.remove(youngest)
 
-    folders = []
+        folders = []
 
-    for i in xrange(list_length):
-        folders.append(folders_to_use[i].strftime('%m.%d.%Y'))
+        for i in xrange(list_length):
+            folders.append(folders_to_use[i].strftime('%m.%d.%Y'))
 
-    return folders
+        return folders
+    else:
+        return []
 
 def get_images(path):
     photos = []

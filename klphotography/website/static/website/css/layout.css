@@ -87,8 +87,18 @@ body {
     border-radius: 0;
 }
 
+.form-control:focus {
+    border-color: var(--dew);
+}
+
 .btn-primary {
     color: var(--dew);
     border-color: var(--dew);
     background-color: white;
+}
+
+.btn-primary:hover {
+    color: white;
+    background-color: var(--dew);
+    border-color: var(--dew);
 }

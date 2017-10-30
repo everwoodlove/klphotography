@@ -1,0 +1,20 @@
+{% extends 'website/layout.html' %}
+{% load static %}
+
+
+{% block content %}
+    {% if landscapes %}
+        <div class="container text-center">
+            {% for photo in landscapes %}
+                <img src="{% static ''%}{{ photo }}" style="width: 25vw; height: auto;">
+            {% endfor %}
+        </div>
+    {% endif %}
+    {% if portraits %}
+        <div class="container text-center">
+            {% for photo in portraits %}
+                <img src="{% static ''%}{{ photo }}" style="width: 25vw; height: auto;">
+            {% endfor %}
+        </div>
+    {% endif %}
+{% endblock content %}
