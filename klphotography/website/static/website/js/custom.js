@@ -19,3 +19,22 @@ for (var i = 0, len = hoverElements.length; i < len; i++) {
         text.classList.remove('show-text');
     });
 }*/
+
+var expandableImages = document.querySelectorAll('.expandable');
+
+for (var i = 0, len = expandableImages.length; i < len; i++) {
+    var image = expandableImages[i];
+
+    image.addEventListener('click', function() {
+        if (this.classList.contains('expandable')) {
+            this.classList.remove('expandable');
+            this.classList.add('fullscreen');
+            this.parent.classList.add('dimmed-background');
+        }
+        else if (this.classList.contains('fullscreen')) {
+            this.classList.remove('fullscreen');
+            this.classList.add('expandable');
+            this.parent.classList.remove('dimmed-background');
+        }
+    });
+}

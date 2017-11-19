@@ -122,3 +122,51 @@
 .padding-bottom-20 {
     padding-bottom: 20px;
 }
+
+
+
+
+
+
+
+.clickable {
+    cursor: pointer;
+}
+
+
+.expandable.landscape {
+    width: 25vw;
+    height: 25vh;
+}
+
+.expandable.portrait {
+    width: 25vw;
+    height: auto;
+}
+
+.expandable-container {
+    width: 25vw;
+    height: 25vh;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.fullscreen {
+    z-index: 999;
+    max-width: 100%;
+    max-height: 100%;
+    position: fixed;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+}
+
+.flex-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dimmed-background {
+    background-color: black;
+}
