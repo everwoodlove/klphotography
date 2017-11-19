@@ -5,18 +5,15 @@
     {% if landscapes %}
         <div class="text-center">
             {% for photo in landscapes %}
-                <div class="expandable-container">
-                    <img class="expandable landscape clickable" src="{% static ''%}{{ photo }}">
+                <div class="lightbox inactive">
+                    <img class="lightbox-trigger landscape non-fullscreen" src="{% static ''%}{{ photo }}">
                 </div>
             {% endfor %}
-        <!--</div>-->
     {% endif %}
     {% if portraits %}
-       <!-- <div class="container text-center">-->
             {% for photo in portraits %}
-
-                <div class="expandable-container">
-                    <img class="expandable portrait clickable" src="{% static ''%}{{ photo }}">
+                <div class="lightbox inactive">
+                    <img class="lightbox-trigger portrait non-fullscreen" src="{% static ''%}{{ photo }}">
                 </div>
             {% endfor %}
         </div>

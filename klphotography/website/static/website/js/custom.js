@@ -20,21 +20,31 @@ for (var i = 0, len = hoverElements.length; i < len; i++) {
     });
 }*/
 
-var expandableImages = document.querySelectorAll('.expandable');
+var lightboxes = document.querySelectorAll('.lightbox');
 
-for (var i = 0, len = expandableImages.length; i < len; i++) {
-    var image = expandableImages[i];
+for (var i = 0, len = lightboxes.length; i < len; i++) {
+    var lightbox = lightboxes[i];
 
-    image.addEventListener('click', function() {
-        if (this.classList.contains('expandable')) {
-            this.classList.remove('expandable');
-            this.classList.add('fullscreen');
-            this.parent.classList.add('dimmed-background');
-        }
-        else if (this.classList.contains('fullscreen')) {
-            this.classList.remove('fullscreen');
-            this.classList.add('expandable');
-            this.parent.classList.remove('dimmed-background');
-        }
-    });
+    var trigger = lightbox.querySelector('.lightbox-trigger');
+    if (trigger) {
+        trigger.addEventListener('click', function() {
+            var trigger = this;
+            var lightbox = trigger.parentElement;
+
+            if (lightbox.classList.contains('active')) {
+                lightbox.classList.add('inactive');
+                lightbox.classList.remove('active');
+                trigger.classList.add('non-fullscreen');
+                trigger.classList.remove('fullscreen');
+                lightbox.classList.remove('flex-content');
+            }
+            else if (lightbox.classList.contains('inactive')) {
+                lightbox.classList.remove('inactive');
+                lightbox.classList.add('active');
+                trigger.classList.remove('non-fullscreen');
+                trigger.classList.add('fullscreen');
+                lightbox.classList.add('flex-content');
+            }
+        });
+    }
 }
