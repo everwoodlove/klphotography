@@ -11,6 +11,7 @@
     transition: opacity 1s;
 }
 
+
 .image-container {
    position: relative;
    overflow: hidden;
@@ -62,4 +63,12 @@
 .show-text {
   visibility: visible;
   opacity: 1;
+}
+
+
+@media (max-width: 767px) {
+   .image-container {
+       position: relative;
+       overflow: hidden;
+    }
 }

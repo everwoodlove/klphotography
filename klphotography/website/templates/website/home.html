@@ -5,7 +5,8 @@
 {% block content %}
 
 {% if photos %}
-    <div>
+<!-- Hidden on Mobile Only -->
+    <div class="d-none d-sm-block">
     {% for photo in photos %}
         {% if photo.number == 0 %}
             <div class="image-container hover border-bottom border-top">
@@ -54,6 +55,27 @@
                 </div>
             {% endif %}
         {% endif %}
+    {% endfor %}
+    </div>
+
+{% endif %}
+
+{% if photos %}
+<!-- Visible on Mobile Only -->
+    <div class="d-block d-sm-none">
+    {% for photo in photos %}
+        <div class="image-container hover border-bottom border-top">
+            <a href="{% url 'shoot' category=photo.category year=photo.year month=photo.month day=photo.day name=photo.name %}">
+                <img class="image-tile-full" src="{% static ''%}{{ photo.photo }}">
+            </a>
+            <span class="image-text photo-font align-middle text-white text-center">
+                 {{ photo.name }} ~ {{ photo.category }}
+                <br/>
+                <span class="h5">
+                    {{ photo.date }}
+                </span>
+            </span>
+        </div>
     {% endfor %}
     </div>
 

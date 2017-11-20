@@ -1,5 +1,6 @@
 {% load static %}
-<nav class="navbar navbar-expand-lg navbar-light navbar-background d-none d-lg-block border-bottom">
+<!--Desktop Navbar -->
+<nav class="desktop navbar navbar-expand-lg navbar-light navbar-background d-none d-lg-block border-bottom">
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-desktop" aria-controls="navbar-desktop" aria-expanded="false" aria-label="Toggle navigation">
     <span class="custom-toggler navbar-toggler-icon"></span>
@@ -45,42 +46,43 @@
   </div>
 </nav>
 
+<!-- Mobile Navbar -->
+<nav class="mobile navbar navbar-expand-lg navbar-light navbar-background d-lg-none border-bottom">
+    <a class="navbar-brand navbar-brand-font nav-justified" href="{% url 'home' %}">
+        KLP
+    </a>
+    <button class="navbar-toggler" type="button">
+        <span class="custom-toggler navbar-toggler-icon"></span>
+    </button>
 
-<nav class="navbar navbar-expand-lg navbar-light navbar-background d-lg-none border-bottom">
-      <a class="navbar-brand navbar-brand-font nav-justified" href="{% url 'home' %}">
-          Kayla Lane Photography
-      </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="custom-toggler navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto body-font">
-      <li class="nav-item">
-        <a class="nav-link" href="{% url 'aboutme' %}">
-            About
-        </a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Gallery
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="{% url 'gallery' 'automotive' %}">Automotive</a>
-          <a class="dropdown-item" href="{% url 'gallery' 'pets' %}">Pets</a>
-          <a class="dropdown-item" href="{% url 'gallery' 'portraits' %}">Portraits</a>
-          <a class="dropdown-item" href="{% url 'gallery' 'misc' %}">Miscellaneous</a>
-        </div>
-      </li>
-        <li class="nav-item">
-        <a class="nav-link" href="{% url 'pricing' %}">
-            Pricing
-        </a>
-        <li class="nav-item">
-        <a class="nav-link" href="{% url 'contact' %}">
-            Contact
-        </a>
-      </li>
-    </ul>
-  </div>
+    <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right body-font">
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'aboutme' %}">
+                About
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbar-mobile-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Gallery
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbar-mobile-dropdown">
+              <a class="dropdown-item" href="{% url 'gallery' 'automotive' %}">Automotive</a>
+              <a class="dropdown-item" href="{% url 'gallery' 'pets' %}">Pets</a>
+              <a class="dropdown-item" href="{% url 'gallery' 'portraits' %}">Portraits</a>
+              <a class="dropdown-item" href="{% url 'gallery' 'misc' %}">Miscellaneous</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'pricing' %}">
+                Pricing
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'contact' %}">
+                Contact
+            </a>
+          </li>
+        </ul>
+    </div>
 </nav>

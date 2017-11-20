@@ -16,15 +16,14 @@
 
 .navbar-background {
     background-color: white;
-    //background-color: var(--creosote);
 }
 
 .navbar-light .navbar-toggler {
-    border-color: var(--rain);
+    border-color: white;
 }
 
 .navbar-light .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(91, 125, 134)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(144, 178, 187)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
 .dropdown-toggle:after {
@@ -32,7 +31,6 @@
 }
 
 .dropdown-menu {
-    //background-color: var(--creosote);
     background-color: white;
     border: none;
 }
@@ -43,7 +41,78 @@
 
 .dropdown-item:focus, .dropdown-item:hover {
     color: var(--slate);
-    //color: white;
-    //background-color: var(--creosote);
     background-color: white;
 }
+
+.index {
+    z-index: 100;
+}
+
+.toggle-right {
+    right: 30vw !important;
+}
+
+@media only screen and (max-width: 767px) {
+    .navbar-collapse{
+      background-color: white;
+      position: fixed;
+      top: 0;
+      transition:all 0.8s ease-out;
+      height: 100%;
+      width: 70vw;
+      right: 500px;
+      z-index: 99;
+    }
+
+    .navbar-nav {
+        padding-left: 10vw;
+        padding-top: 2vh;
+    }
+
+    .mobile-overlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 98;
+        color: rgba(17,17,17,.8);
+    }
+
+    .website-footer .ml-auto {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .website-footer .navbar-nav {
+        flex-direction: row;
+        padding: 0;
+    }
+
+    .website-footer li {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .website-footer ul {
+        width: 100%;
+    }
+}
+
+.dropdown-toggle::after {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: .255em;
+    vertical-align: .255em;
+    content: "";
+    border-top: .3em solid;
+    border-right: .3em solid transparent;
+    border-bottom: 0;
+    border-left: .3em solid transparent;
+}
+
+button:focus {
+    outline: none;
+}
+
