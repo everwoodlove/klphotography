@@ -1,0 +1,4 @@
+.gallery a:hover {
+    text-decoration: none;
+    color: var(--slate);
+}
