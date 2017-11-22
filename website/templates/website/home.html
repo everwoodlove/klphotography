@@ -3,13 +3,13 @@
 
 {% block content %}
 
-{% if photos %}
+{% if photos != None %}
     <!-- Hidden on Mobile Only -->
     <div class="d-none d-sm-block">
     {% for photo in photos %}
         {% if photo.block == 0 %}
             <div class="image-container hover border-bottom border-top">
-                <a href="#">
+                <a href="{% url 'shoot' category=photo.category date=photo.shoot_date name=photo.shoot_name %}">
                     <img class="image-tile-full" src="{{ photo.url }}">
                 </a>
                 <span class="image-text photo-font align-middle text-white text-center">

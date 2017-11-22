@@ -21,9 +21,11 @@
   <body class="page-background page-border">
     {% include 'website/navbar.html' %}
 
+    <div class="navbar-padding">
     {% block content %}
       If you see this, something is wrong!
     {% endblock content %}
+    </div>
 
     {% include 'website/footer.html' %}
   </body>

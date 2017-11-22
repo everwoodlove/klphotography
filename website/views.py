@@ -67,11 +67,12 @@ def gallery(request, category):
     photos = get_newest_photoshoot_photos_from_git(category_given=category)
     total_photos = []
 
-    for photo in photos:
-        photo_metadata = build_photo_information(photo)
-        total_photos.append(photo_metadata)
+    if photos:
+        for photo in photos:
+            photo_metadata = build_photo_information(photo)
+            total_photos.append(photo_metadata)
 
-    total_photos = assign_numbers_to_photos(total_photos)
+        total_photos = assign_numbers_to_photos(total_photos)
 
     context = {'photos': total_photos}
 
@@ -83,11 +84,12 @@ def get_homepage_photos_from_git():
 
     preview_photos = get_newest_photoshoot_photos_from_git(only_get_preview_photos=True)
 
-    for photo in preview_photos:
-        photo_metadata = build_photo_information(photo)
-        homepage_photos.append(photo_metadata)
+    if preview_photos:
+        for photo in preview_photos:
+            photo_metadata = build_photo_information(photo)
+            homepage_photos.append(photo_metadata)
 
-    homepage_photos = assign_numbers_to_photos(homepage_photos)
+        homepage_photos = assign_numbers_to_photos(homepage_photos)
 
     return homepage_photos
 
@@ -311,16 +313,20 @@ def parse_json_array(json_array, selector_type = None, name_filter = None):
     array = []
     json_array = JSON.loads(json_array, object_hook=_json_object_hook)
 
-    for json in json_array:
-        if selector_type:
-            if json.type == selector_type:
-                if name_filter:
-                    if name_filter in json.name:
+    try:
+        for json in json_array:
+            if selector_type:
+                if json.type and json.type == selector_type:
+                    if name_filter:
+                        if name_filter in json.name:
+                            array.append(json)
+                    else:
                         array.append(json)
-                else:
-                    array.append(json)
-        else:
-            array.append(json)
+            else:
+                array.append(json)
+    except:
+        print 'An error occurred and the JSON could not be parsed.'
+        print json_array
 
     return array
 
@@ -332,7 +338,7 @@ def get_api_call_contents(url):
         return value
     else:
         # TODO do not deploy this!!!!!!
-        new_value = requests.get(url, auth=('everwoodlove', '7c57bf5eaed676db5ed7da3a27980243780c5cbb')).content
+        new_value = requests.get(url, auth=('everwoodlove', '0536d49d6cbd886beeede42c08c19725036f9362')).content
         cache.set(url, new_value)
 
         return new_value

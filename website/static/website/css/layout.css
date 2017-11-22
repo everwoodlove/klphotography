@@ -115,3 +115,7 @@ body {
     background-color: var(--dew);
     border-color: var(--dew);
 }
+
+.navbar-padding {
+    padding-top: 57px;
+}

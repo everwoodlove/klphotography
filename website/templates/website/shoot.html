@@ -6,7 +6,7 @@
         <div class="text-center">
             {% for photo in photos %}
                 <div class="lightbox inactive">
-                    <img class="lightbox-trigger landscape non-fullscreen" src="{{ photo.url }}">
+                    <img class="lightbox-trigger {% if photo.orientation == 'landscape' %} landscape{% else %} portrait{% endif %} non-fullscreen" src="{{ photo.url }}">
                 </div>
             {% endfor %}
     {% endif %}

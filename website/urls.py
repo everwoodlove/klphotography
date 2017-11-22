@@ -6,7 +6,7 @@ urlpatterns = [
     url(r'^$', views.home, name='home'),
     url(r'^pricing/$', views.pricing, name='pricing'),
     url(r'^gallery/(?P<category>\w+)/$', views.gallery, name='gallery'),
-    url(r'^gallery/(?P<category>\w+)/(?P<date>\w+)/(?P<name>\w+)/$', views.shoot, name='shoot'),
+    url(r'^gallery/(?P<category>(.*?))/(?P<date>(.*?))/(?P<name>(.*?))/$', views.shoot, name='shoot'),
     url(r'^contact/$', views.contact, name='contact'),
     url(r'^about-me/$', views.about, name='aboutme')
 ]
