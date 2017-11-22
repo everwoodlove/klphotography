@@ -7,9 +7,9 @@
     <!-- Hidden on Mobile Only -->
     <div class="d-none d-sm-block">
     {% for photo in photos %}
-        {% if photo.number == 0 %}
+        {% if photo.block == 0 %}
             <div class="image-container hover border-bottom border-top">
-                <a href="{% url 'shoot' category=photo.category date=photo.shoot_date name=photo.shoot_name %}">
+                <a href="#">
                     <img class="image-tile-full" src="{{ photo.url }}">
                 </a>
                 <span class="image-text photo-font align-middle text-white text-center">
@@ -21,16 +21,16 @@
                 </span>
             </div>
         {% else %}
-            {% if photo.number == 1 %}
+            {% if photo.block == 1 %}
                 <div class="text-center row image-container hover no-margin">
             {% endif %}
 
             <div class="image-half border-top border-bottom border-right">
-                <a href="{% url 'shoot' category=photo.category date=photo.shoot_date name=photo.shoot_name %}">
+                <a href="#">
                     <img class="col img-responsive" src="{{ photo.url }}">
                 </a>
 
-                {% if photo.number == 1 %}
+                {% if photo.block == 1 %}
                     <span class="text-overlay-left photo-font-half align-middle text-center text-white">
                       {{ photo.shoot_name }} ~ {{ photo.category }}
                       <br/>
@@ -38,7 +38,7 @@
                           {{ photo.shoot_date }}
                       </span>
                     </span>
-                {% elif photo.number == 2 %}
+                {% elif photo.block == 2 %}
                     <span class="text-overlay-right photo-font-half align-middle text-center text-white">
                       {{ photo.shoot_name }} ~ {{ photo.category }}
                       <br/>
@@ -50,7 +50,7 @@
 
             </div>
 
-            {% if photo.number == 2 %}
+            {% if photo.block == 2 %}
                 </div>
             {% endif %}
         {% endif %}
@@ -61,7 +61,7 @@
     <div class="d-block d-sm-none">
     {% for photo in photos %}
         <div class="image-container hover border-bottom border-top">
-            <a href="{% url 'shoot' category=photo.category date=photo.shoot_date name=photo.shoot_name %}">
+            <a href="#">
                 <img class="image-tile-full" src="{{ photo.url }}">
             </a>
             <span class="image-text photo-font align-middle text-white text-center">

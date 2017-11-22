@@ -2,20 +2,12 @@
 {% load static %}
 
 {% block content %}
-    {% if landscapes %}
+    {% if photos %}
         <div class="text-center">
-            {% for photo in landscapes %}
+            {% for photo in photos %}
                 <div class="lightbox inactive">
-                    <img class="lightbox-trigger landscape non-fullscreen" src="{% static ''%}{{ photo }}">
+                    <img class="lightbox-trigger landscape non-fullscreen" src="{{ photo.url }}">
                 </div>
             {% endfor %}
-    {% endif %}
-    {% if portraits %}
-            {% for photo in portraits %}
-                <div class="lightbox inactive">
-                    <img class="lightbox-trigger portrait non-fullscreen" src="{% static ''%}{{ photo }}">
-                </div>
-            {% endfor %}
-        </div>
     {% endif %}
 {% endblock content %}

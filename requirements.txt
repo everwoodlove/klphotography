@@ -5,3 +5,5 @@ gunicorn==19.6.0
 Pillow==4.3.0
 psycopg2==2.6.2
 whitenoise==3.2
+django-bmemcached==0.2.3
+python-binary-memcached==0.26.1
