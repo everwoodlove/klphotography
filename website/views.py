@@ -9,6 +9,10 @@ import io
 from collections import namedtuple
 from django.core.cache import cache
 from copy import copy
+from django.shortcuts import render_to_response
+from django.template import RequestContext
+from requests_oauthlib import OAuth1
+from klphotography.settings import CLIENT_ID, CLIENT_SECRET
 
 CATEGORIES = {'pets', 'portraits', 'automotive', 'misc', 'weddings'}
 
@@ -28,8 +32,8 @@ def home(request):
     return render(request, 'website/home.html', context)
 
 
-def pricing(request):
-    return render(request, 'website/pricing.html')
+def blog(request):
+    return render(request, 'website/blog.html')
 
 
 def about(request):
@@ -77,6 +81,20 @@ def gallery(request, category):
     context = {'photos': total_photos}
 
     return render(request, url, context)
+
+
+def handle_404(request):
+    response = render_to_response('website/404.html', {},
+                                  context_instance=RequestContext(request))
+    response.status_code = 404
+    return response
+
+
+def handle_500(request):
+    response = render_to_response('website/500.html', {},
+                                  context_instance=RequestContext(request))
+    response.status_code = 500
+    return response
 
 
 def get_homepage_photos_from_git():
@@ -327,6 +345,7 @@ def parse_json_array(json_array, selector_type = None, name_filter = None):
     except:
         print 'An error occurred and the JSON could not be parsed.'
         print json_array
+        print array
 
     return array
 
@@ -338,7 +357,8 @@ def get_api_call_contents(url):
         return value
     else:
         # TODO do not deploy this!!!!!!
-        new_value = requests.get(url, auth=('everwoodlove', '0536d49d6cbd886beeede42c08c19725036f9362')).content
+        #auth = OAuth1(CLIENT_ID, CLIENT_SECRET)
+        new_value = requests.get(url, auth=('everwoodlove', '655af79b86afd1cea2a4619ce5c13a5b0869b495')).content
         cache.set(url, new_value)
 
         return new_value

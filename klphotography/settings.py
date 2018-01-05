@@ -8,9 +8,11 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 SECRET_KEY = "{{ secret_key }}"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
+ALLOWED_HOSTS = ['0.0.0.0']
 
-TOKEN='887e3331571aa967e9f5a802827002e44788ea7b'
+CLIENT_ID='c83ee2f041476b2a3d46'
+CLIENT_SECRET='0f00f02ff8f7069f6062fa262ed3364784f7dca2'
 
 # Application definition
 

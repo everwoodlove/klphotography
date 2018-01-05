@@ -115,3 +115,9 @@ body {
     background-color: var(--dew);
     border-color: var(--dew);
 }
+
+.test {
+    text-align:center;
+    display:inline-block;
+    float:none;
+}

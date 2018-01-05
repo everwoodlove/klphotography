@@ -120,26 +120,10 @@ button:focus {
     .navbar-padding {
         padding-top: 57px;
     }
-
-    .navbar-collpase.toggle-right {
-        display: block;
-    }
-
-    .navbar-collpase {
-        display: none !important;
-    }
 }
 
-@media (max-width: 769px) {
-    .navbar-padding {
-        padding-top: 57px;
-    }
-
-    .navbar-collpase.toggle-right {
-        display: inline-block !important;
-    }
-
-    .navbar-collapse {
-        display: none !important;
-    }
+@media (min-width: 768px) and (max-width: 1000px) {
+   .collapse {
+       display: none !important;
+   }
 }

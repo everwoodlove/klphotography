@@ -121,7 +121,7 @@ button:focus {
         padding-top: 57px;
     }
 
-    .navbar-collpase.toggle-right {
+    .navbar-collpase .toggle-right {
         display: block;
     }
 
@@ -135,11 +135,11 @@ button:focus {
         padding-top: 57px;
     }
 
-    .navbar-collpase.toggle-right {
-        display: inline-block !important;
+    .navbar-collpase .toggle-right {
+        display: block;
     }
 
-    .navbar-collapse {
+    .navbar-collpase {
         display: none !important;
     }
 }
