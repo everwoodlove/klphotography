@@ -2,9 +2,13 @@ from __future__ import unicode_literals
 import os
 from datetime import *
 from PIL import Image
+from django.contrib.staticfiles.templatetags.staticfiles import static
 from django.shortcuts import render
+from klphotography.settings import PROJECT_ROOT
 
 categories = {'Pets', 'Portraits', 'Automotive', 'Misc', 'Weddings'}
+
+BASE_URL = 'website/photos/'
 
 def home(request):
     photos = get_homepage_photos()
@@ -12,8 +16,6 @@ def home(request):
         context = {'photos': photos}
     else:
         context = {}
-
-    print photos
 
     return render(request, 'website/home.html', context)
 
@@ -31,23 +33,11 @@ def shoot(request, category, year, month, day, name):
     # get all images in the folder, including in the preview folder
     # return them
 
-    url = '/Users/bemmons/Documents/Nichole/klphotography/klphotography/klphotography/website/static/website/photos/' + category + '/' + month + '.' + day + '.' + year + '/' + name
+    url = static(BASE_URL + category + '/' + month + '.' + day + '.' + year + '/' + name).lower()
 
     landscapes, portraits = get_all_photos(url)
-    landscape_photos = []
-    portrait_photos = []
 
-    for photo in landscapes:
-        # TODO remove this line when going to prod
-        photo = photo.replace('/Users/bemmons/Documents/Nichole/klphotography/klphotography/klphotography/website/static/', '')
-        landscape_photos.append(photo)
-
-    for photo in portraits:
-        # TODO remove this line when going to prod
-        photo = photo.replace('/Users/bemmons/Documents/Nichole/klphotography/klphotography/klphotography/website/static/', '')
-        portrait_photos.append(photo)
-
-    context = {'landscapes': landscape_photos, 'portraits': portrait_photos}
+    context = {'landscapes': landscapes, 'portraits': portraits}
 
     return render(request, 'website/shoot.html', context)
 
@@ -55,7 +45,7 @@ def gallery(request, category):
     url = 'website/gallery/'
 
     for cat in categories:
-        if category == cat:
+        if category == cat.lower():
             url += cat + '.html'
             break
 
@@ -63,12 +53,7 @@ def gallery(request, category):
 
     return render(request, url, context)
 
-# Its ideal to have landscape photos be the full images
-# and portraits to be the half images
-# But what if we only have 1 portrait and 2 landscapes?
 
-#TODO for home photos:
-# parse through all directories and get most recent 6-7 shoots to display and pick first image of each in the preview folder
 def get_homepage_photos():
     homepage_photos = []
     i = 0
@@ -106,10 +91,13 @@ def get_homepage_photos():
 
     return homepage_photos
 
+
 def get_preview_photos(category, list_length):
-    #TODO This won't work in prod!
-    original_path = '/Users/bemmons/Documents/Nichole/klphotography/klphotography/klphotography/website/static/website/photos/' + category
+    partial_path = static(BASE_URL + category).lower()
+    original_path = PROJECT_ROOT + partial_path
     dates_directories = get_most_recent_folders_by_date(original_path)
+
+    print dates_directories
 
     photos_to_return = []
 
@@ -206,8 +194,8 @@ def sort_images(images_list):
         im = Image.open(image)
         width, height = im.size
 
-        # TODO remove this line when going to prod
-        image = image.replace('/Users/bemmons/Documents/Nichole/klphotography/klphotography/klphotography/website/static/', '')
+        image = image.replace(PROJECT_ROOT + '/staticfiles/', '')
+
         if width > height:
             landscapes.append(image)
         else:
