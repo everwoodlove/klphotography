@@ -33,7 +33,9 @@ def shoot(request, category, year, month, day, name):
     # get all images in the folder, including in the preview folder
     # return them
 
-    url = static(BASE_URL + category + '/' + month + '.' + day + '.' + year + '/' + name).lower()
+    partial_url = static(BASE_URL + category + '/' + month + '.' + day + '.' + year + '/' + name).lower()
+    url = PROJECT_ROOT + partial_url
+    print url
 
     landscapes, portraits = get_all_photos(url)
 
@@ -125,14 +127,20 @@ def get_preview_photos(category, list_length):
 
 def get_all_photos(path):
     photo_set = []
+    print os.path.exists(path)
+
+    if os.path.exists(os.path.dirname(path)):
+        print 'hello?'
 
     if os.path.isdir(path):
+        print 'true!'
         photos = get_images(path)
         photo_set = photo_set + photos
 
     path = path + '/preview'
 
     if os.path.isdir(path):
+        print 'true~'
         photos = get_images(path)
         photo_set = photo_set + photos
 

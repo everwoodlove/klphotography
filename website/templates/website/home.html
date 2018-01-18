@@ -14,7 +14,11 @@
                     <img class="image-tile-full" src="{% static ''%}{{ photo.photo }}">
                 </a>
                 <span class="image-text photo-font align-middle text-white text-center">
-                     {{ photo.name }} ~ {{ photo.category }}
+                     {{ photo.name }}
+                    <br/>
+                    <span class="h4">
+                        {{ photo.category }}
+                    </span>
                     <br/>
                     <span class="h5">
                         {{ photo.date }}
@@ -33,7 +37,11 @@
 
                 {% if photo.number == 1 %}
                     <span class="text-overlay-left photo-font-half align-middle text-center text-white">
-                      {{ photo.name }} ~ {{ photo.category }}
+                      {{ photo.name }}
+                        <br/>
+                        <span class="h4">
+                            {{ photo.category }}
+                        </span>
                       <br/>
                       <span class="h5">
                           {{ photo.date }}
@@ -41,7 +49,11 @@
                     </span>
                 {% elif photo.number == 2 %}
                     <span class="text-overlay-right photo-font-half align-middle text-center text-white">
-                      {{ photo.name }} ~ {{ photo.category }}
+                      {{ photo.name }}
+                        <br/>
+                        <span class="h4">
+                            {{ photo.category }}
+                        </span>
                       <br/>
                       <span class="h5">
                           {{ photo.date }}
@@ -69,7 +81,11 @@
                 <img class="image-tile-full" src="{% static ''%}{{ photo.photo }}">
             </a>
             <span class="image-text photo-font align-middle text-white text-center">
-                 {{ photo.name }} ~ {{ photo.category }}
+                 {{ photo.name }}
+                <br/>
+                <span class="h4">
+                    {{ photo.category }}
+                </span>
                 <br/>
                 <span class="h5">
                     {{ photo.date }}
