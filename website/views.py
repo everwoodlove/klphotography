@@ -51,7 +51,10 @@ def gallery(request, category):
             url += cat.lower() + '.html'
             break
 
-    context = {'photos': get_preview_photos(category, 3)}
+    preview_photos = get_preview_photos(category, 3)
+    photos = categorize_photos(preview_photos)
+
+    context = {'photos': photos}
 
     return render(request, url, context)
 
@@ -62,36 +65,45 @@ def get_homepage_photos():
 
     for category in categories:
         photo_set = get_preview_photos(category, 7)
-        for photo in photo_set:
-            if i == 0:
-                name = 'landscapes'
-            else:
-                name = 'portraits'
-
-            if photo.get(name, []):
-                date = photo.get('date', '')
-                date_split = date.split('.')
-
-                if (len(date_split) is 3):
-                    day = date_split[1]
-                    month = date_split[0]
-                    year = date_split[2]
-                else:
-                    day = ''
-                    month = ''
-                    year = ''
-
-                shoot_photo = {'name': photo.get('name', ''), 'day': day, 'month': month, 'year': year,
-                               'photo': photo.get(name, [''])[0],
-                               'category': photo.get('category', ''), 'number': i}
-                i += 1
-
-                if i > 2:
-                    i = 0
-
-                homepage_photos.append(shoot_photo)
+        homepage_photos = categorize_photos(photo_set)
 
     return homepage_photos
+
+
+def categorize_photos(photo_set):
+    i = 0
+    photoset = []
+
+    for photo in photo_set:
+        if i == 0:
+            name = 'landscapes'
+        else:
+            name = 'portraits'
+
+        if photo.get(name, []):
+            date = photo.get('date', '')
+            date_split = date.split('.')
+
+            if (len(date_split) is 3):
+                day = date_split[1]
+                month = date_split[0]
+                year = date_split[2]
+            else:
+                day = ''
+                month = ''
+                year = ''
+
+            shoot_photo = {'name': photo.get('name', ''), 'day': day, 'month': month, 'year': year,
+                           'photo': photo.get(name, [''])[0],
+                           'category': photo.get('category', ''), 'number': i}
+            i += 1
+
+            if i > 2:
+                i = 0
+
+            photoset.append(shoot_photo)
+
+    return photoset
 
 
 def get_preview_photos(category, list_length):

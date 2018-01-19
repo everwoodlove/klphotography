@@ -6,14 +6,14 @@
 
 {% if photos %}
 <!-- Hidden on Mobile Only -->
-    <div class="d-none d-sm-block">
+<div class="d-none d-sm-block">
     {% for photo in photos %}
-        {% if photo.number == 0 %}
-            <div class="image-container hover border-bottom border-top">
-                <a href="{% url 'shoot' category=photo.category year=photo.year month=photo.month day=photo.day name=photo.name %}">
-                    <img class="image-tile-full" src="{% static ''%}{{ photo.photo }}">
-                </a>
-                <span class="image-text photo-font align-middle text-white text-center">
+    {% if photo.number == 0 %}
+    <div class="image-container hover border-bottom border-top">
+        <a href="{% url 'shoot' category=photo.category year=photo.year month=photo.month day=photo.day name=photo.name %}">
+            <img class="image-tile-full" src="{% static ''%}{{ photo.photo }}">
+        </a>
+        <span class="image-text photo-font align-middle text-white text-center">
                      {{ photo.name }}
                     <br/>
                     <span class="h4">
@@ -24,63 +24,63 @@
                         {{ photo.date }}
                     </span>
                 </span>
-            </div>
-        {% else %}
-            {% if photo.number == 1 %}
-                <div class="text-center row image-container hover no-margin">
-            {% endif %}
-
-            <div class="image-half border-top border-bottom border-right">
-                <a href="{% url 'shoot' category=photo.category year=photo.year month=photo.month day=photo.day name=photo.name %}">
-                    <img class="col img-responsive" src="{% static '' %}{{ photo.photo }}">
-                </a>
-
-                {% if photo.number == 1 %}
-                    <span class="text-overlay-left photo-font-half align-middle text-center text-white">
-                      {{ photo.name }}
-                        <br/>
-                        <span class="h4">
-                            {{ photo.category }}
-                        </span>
-                      <br/>
-                      <span class="h5">
-                          {{ photo.date }}
-                      </span>
-                    </span>
-                {% elif photo.number == 2 %}
-                    <span class="text-overlay-right photo-font-half align-middle text-center text-white">
-                      {{ photo.name }}
-                        <br/>
-                        <span class="h4">
-                            {{ photo.category }}
-                        </span>
-                      <br/>
-                      <span class="h5">
-                          {{ photo.date }}
-                      </span>
-                    </span>
-                {% endif %}
-
-            </div>
-
-            {% if photo.number == 2 %}
-                </div>
-            {% endif %}
-        {% endif %}
-    {% endfor %}
     </div>
+    {% else %}
+    {% if photo.number == 1 %}
+    <div class="text-center row image-container hover no-margin">
+        {% endif %}
+
+        <div class="image-half border-top border-bottom border-right">
+            <a href="{% url 'shoot' category=photo.category year=photo.year month=photo.month day=photo.day name=photo.name %}">
+                <img class="col img-responsive" src="{% static '' %}{{ photo.photo }}">
+            </a>
+
+            {% if photo.number == 1 %}
+            <span class="text-overlay-left photo-font-half align-middle text-center text-white">
+                      {{ photo.name }}
+                        <br/>
+                        <span class="h4">
+                            {{ photo.category }}
+                        </span>
+                      <br/>
+                      <span class="h5">
+                          {{ photo.date }}
+                      </span>
+                    </span>
+            {% elif photo.number == 2 %}
+            <span class="text-overlay-right photo-font-half align-middle text-center text-white">
+                      {{ photo.name }}
+                        <br/>
+                        <span class="h4">
+                            {{ photo.category }}
+                        </span>
+                      <br/>
+                      <span class="h5">
+                          {{ photo.date }}
+                      </span>
+                    </span>
+            {% endif %}
+
+        </div>
+
+        {% if photo.number == 2 %}
+    </div>
+    {% endif %}
+    {% endif %}
+    {% endfor %}
+</div>
 
 {% endif %}
 
 {% if photos %}
 <!-- Visible on Mobile Only -->
-    <div class="d-block d-sm-none">
+<div class="d-block d-sm-none">
     {% for photo in photos %}
-        <div class="image-container hover border-bottom border-top">
-            <a href="{% url 'shoot' category=photo.category year=photo.year month=photo.month day=photo.day name=photo.name %}">
-                <img class="image-tile-full" src="{% static ''%}{{ photo.photo }}">
-            </a>
-            <span class="image-text photo-font align-middle text-white text-center">
+    <div class="image-container hover border-bottom border-top">
+        <a href="{% url 'shoot' category=photo.category year=photo.year month=photo.month day=photo.day name=photo.name %}">
+            <img class="image-tile-full" src="{% static ''%}{{ photo.photo }}">
+        </a>
+        <span class="image-text photo-font align-middle text-white text-center">
                  {{ photo.name }}
                 <br/>
                 <span class="h4">
@@ -91,9 +91,9 @@
                     {{ photo.date }}
                 </span>
             </span>
-        </div>
-    {% endfor %}
     </div>
+    {% endfor %}
+</div>
 
 {% endif %}
 
