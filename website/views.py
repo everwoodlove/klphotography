@@ -19,8 +19,8 @@ def home(request):
 
     return render(request, 'website/home.html', context)
 
-def pricing(request):
-    return render(request, 'website/pricing.html')
+def blog(request):
+    return render(request, 'website/blog.html')
 
 def about(request):
     return render(request, 'website/about-me.html')
