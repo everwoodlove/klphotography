@@ -9,13 +9,6 @@
     z-index: 100;
 }
 
-.lightbox.inactive {
-    width: 25vw;
-    height: 25vh;
-    display: inline-block;
-    overflow: hidden;
-}
-
 .lightbox-trigger {
     cursor: pointer;
 }
@@ -27,18 +20,44 @@
     z-index: 100;
 }
 
-.lightbox .portrait.non-fullscreen {
-    width: 25vw;
-    height: auto;
-}
-
-.lightbox .landscape.non-fullscreen {
-    width: 25vw;
-    height: 25vh;
-}
-
 .flex-content {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.lightbox .portrait.non-fullscreen {
+    max-width: 100%;
+    height: auto;
+}
+
+.lightbox .landscape.non-fullscreen {
+    max-width: 100%;
+    height: auto;
+}
+
+.lightbox.inactive {
+    max-width: 100%;
+    height: auto;
+display: inline-block;
+overflow: hidden;
+}
+
+@media only screen and (min-width: 1025px) {
+    .lightbox .portrait.non-fullscreen {
+        width: 25vw;
+        height: auto;
+    }
+
+    .lightbox .landscape.non-fullscreen {
+        width: 25vw;
+        height: 25vh;
+    }
+
+    .lightbox.inactive {
+    width: 25vw;
+    height: 25vh;
+    display: inline-block;
+    overflow: hidden;
+    }
 }

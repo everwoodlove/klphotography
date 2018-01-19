@@ -48,35 +48,25 @@
     z-index: 100;
 }
 
-.toggle-right {
-    right: 30vw !important;
-}
-
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1020px) {
     .navbar-collapse{
       background-color: white;
       position: fixed;
       top: 0;
-      transition:all 0.8s ease-out;
+      transition: all 0.8s ease-out;
       height: 100%;
-      width: 70vw;
-      right: 500px;
+      width: 40vw;
+      right: 100vw;
       z-index: 99;
+    }
+
+    .toggle-right {
+        right: 60vw !important;
     }
 
     .navbar-nav {
         padding-left: 10vw;
         padding-top: 2vh;
-    }
-
-    .mobile-overlay {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        z-index: 98;
-        color: rgba(17,17,17,.8);
     }
 
     .website-footer .ml-auto {
@@ -98,6 +88,38 @@
         width: 100%;
     }
 }
+
+@media only screen and (max-width: 767px) {
+    .navbar-collapse{
+      background-color: white;
+      position: fixed;
+      top: 0;
+      transition:all 0.8s ease-out;
+      height: 100%;
+      width: 70vw;
+      right: 100vw;
+      z-index: 99;
+    }
+
+    .navbar-nav {
+        padding-left: 10vw;
+        padding-top: 2vh;
+    }
+
+    .toggle-right {
+    right: 30vw !important;
+    }
+}
+
+    .mobile-overlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 98;
+        color: rgba(17,17,17,.8);
+    }
 
 .dropdown-toggle::after {
     display: inline-block;

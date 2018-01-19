@@ -2,20 +2,42 @@
 {% load static %}
 
 {% block content %}
+
+<!-- DESKTOP VIEW -->
+<div class="d-none d-lg-block">
     {% if landscapes %}
-        <div class="text-center">
-            {% for photo in landscapes %}
-                <div class="lightbox inactive">
-                    <img class="lightbox-trigger landscape non-fullscreen" src="{% static ''%}{{ photo }}">
-                </div>
-            {% endfor %}
+    <div class="text-center">
+        {% for photo in landscapes %}
+        <div class="lightbox inactive">
+            <img class="lightbox-trigger landscape non-fullscreen" src="{% static ''%}{{ photo }}">
+        </div>
+        {% endfor %}
+        {% endif %}
+        {% if portraits %}
+        {% for photo in portraits %}
+        <div class="lightbox inactive">
+            <img class="lightbox-trigger portrait non-fullscreen" src="{% static ''%}{{ photo }}">
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+</div>
+
+<!-- MOBILE/TABLET VIEW -->
+<div class="d-lg-none">
+    {% if landscapes %}
+    {% for photo in landscapes %}
+    <div class="lightbox inactive">
+        <img class="lightbox-trigger landscape non-fullscreen" src="{% static ''%}{{ photo }}">
+    </div>
+    {% endfor %}
     {% endif %}
     {% if portraits %}
-            {% for photo in portraits %}
-                <div class="lightbox inactive">
-                    <img class="lightbox-trigger portrait non-fullscreen" src="{% static ''%}{{ photo }}">
-                </div>
-            {% endfor %}
-        </div>
+    {% for photo in portraits %}
+    <div class="lightbox inactive">
+        <img class="lightbox-trigger portrait non-fullscreen" src="{% static ''%}{{ photo }}">
+    </div>
+    {% endfor %}
     {% endif %}
+</div>
 {% endblock content %}
