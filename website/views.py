@@ -48,7 +48,7 @@ def gallery(request, category):
 
     for cat in categories:
         if category == cat.lower():
-            url += cat + '.html'
+            url += cat.lower() + '.html'
             break
 
     context = {'photos': get_preview_photos(category, 3)}
