@@ -25,8 +25,8 @@ def blog(request):
 def about(request):
     return render(request, 'website/about-me.html')
 
-def contact(request):
-    return render(request, 'website/contact.html')
+def faqs(request):
+    return render(request, 'website/faqs.html')
 
 def shoot(request, category, year, month, day, name):
     # Build URL from params
